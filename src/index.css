@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Leaflet Map Styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+.leaflet-control-attribution.leaflet-control {
+  font-size: 10px;
+}
+
+/* Dark mode map adjustments */
+.dark .leaflet-layer,
+.dark .leaflet-control-zoom-in,
+.dark .leaflet-control-zoom-out,
+.dark .leaflet-control-attribution {
+  filter: invert(1) hue-rotate(180deg) brightness(0.8);
+}
+
+/* Grid Layout Styles */
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top;
+}
+
+.react-grid-item.react-grid-placeholder {
+  background: rgba(59, 130, 246, 0.2);
+  border: 2px dashed #3b82f6;
+  border-radius: 0.5rem;
+}
+
+.react-resizable-handle {
+  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="6" height="6"%3E%3Cpath d="M6 6H0V4.2h4.2V0H6v6z" fill="rgba(0,0,0,.2)"%3E%3C/path%3E%3C/svg%3E');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  box-sizing: border-box;
+  cursor: se-resize;
+  padding: 0 3px 3px 0;
+}
+
+.dark .react-resizable-handle {
+  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="6" height="6"%3E%3Cpath d="M6 6H0V4.2h4.2V0H6v6z" fill="rgba(255,255,255,.2)"%3E%3C/path%3E%3C/svg%3E');
+}
